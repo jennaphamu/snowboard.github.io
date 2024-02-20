@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./Snowboarding .css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Are you ready for snowboarding?</h1>
+                <h2 class = "header_text">Sunday, February 25, 2024</h2>
+                <h3 class = "header_text">5-10PM - price of a ticket or price of regret</h3>
+            </div>
+            <div class="gif_container">
+                <img src="https://media1.giphy.com/media/l0MYClvw1RPj1cZeo/200.webp?cid=790b7611shgz88dpu3bcujt9fdmmy30eox3r60rrf6btcmqt&ep=v1_gifs_search&rid=200.webp&ct=g" alt="SnowBoard Illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes_option.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
